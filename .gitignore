@@ -10,3 +10,6 @@ foldy-foldy-draw-draw/.idea/modules.xml
 foldy-foldy-draw-draw/.idea/workspace.xml
 
 foldy-foldy-draw-draw/.idea/xcode.xml
+
+*.xcuserdatad/
+.DS_Store
