@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2394B9A31D24186A0020F9D9 /* NWADrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2394B9A21D24186A0020F9D9 /* NWADrawing.swift */; };
+		2394B9A51D2418820020F9D9 /* NWADrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2394B9A41D2418820020F9D9 /* NWADrawingView.swift */; };
 		E65700361D23F23C0076F2C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65700351D23F23C0076F2C3 /* Assets.xcassets */; };
 		E657003D1D23F23C0076F2C3 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E657003C1D23F23C0076F2C3 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E65700421D23F23C0076F2C3 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65700411D23F23C0076F2C3 /* Messages.framework */; };
@@ -14,7 +16,6 @@
 		E65700481D23F23C0076F2C3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65700461D23F23C0076F2C3 /* MainInterface.storyboard */; };
 		E657004A1D23F23C0076F2C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65700491D23F23C0076F2C3 /* Assets.xcassets */; };
 		E674BF3C1D24067E00F0F230 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BF3B1D24067E00F0F230 /* Drawing.swift */; };
-		E674BF3E1D24075500F0F230 /* NWADrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BF3D1D24075500F0F230 /* NWADrawing.swift */; };
 		E674BF401D2408B700F0F230 /* CompletedDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BF3F1D2408B700F0F230 /* CompletedDrawingViewController.swift */; };
 		E674BF421D2408DD00F0F230 /* BuildDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BF411D2408DD00F0F230 /* BuildDrawingViewController.swift */; };
 		E674BF441D240EB500F0F230 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BF431D240EB500F0F230 /* DrawingViewController.swift */; };
@@ -45,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2394B9A21D24186A0020F9D9 /* NWADrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NWADrawing.swift; sourceTree = "<group>"; };
+		2394B9A41D2418820020F9D9 /* NWADrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NWADrawingView.swift; sourceTree = "<group>"; };
 		E65700321D23F23C0076F2C3 /* foldy-foldy-draw-draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "foldy-foldy-draw-draw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65700351D23F23C0076F2C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E65700371D23F23C0076F2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,7 +58,6 @@
 		E65700491D23F23C0076F2C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E657004B1D23F23C0076F2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E674BF3B1D24067E00F0F230 /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
-		E674BF3D1D24075500F0F230 /* NWADrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NWADrawing.swift; sourceTree = "<group>"; };
 		E674BF3F1D2408B700F0F230 /* CompletedDrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedDrawingViewController.swift; sourceTree = "<group>"; };
 		E674BF411D2408DD00F0F230 /* BuildDrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildDrawingViewController.swift; sourceTree = "<group>"; };
 		E674BF431D240EB500F0F230 /* DrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				E674BF3F1D2408B700F0F230 /* CompletedDrawingViewController.swift */,
 				E674BF411D2408DD00F0F230 /* BuildDrawingViewController.swift */,
 				E674BF431D240EB500F0F230 /* DrawingViewController.swift */,
+				2394B9A41D2418820020F9D9 /* NWADrawingView.swift */,
 				E674BF3A1D24065900F0F230 /* Model */,
 				E65700461D23F23C0076F2C3 /* MainInterface.storyboard */,
 				E65700491D23F23C0076F2C3 /* Assets.xcassets */,
@@ -127,8 +130,8 @@
 		E674BF3A1D24065900F0F230 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2394B9A21D24186A0020F9D9 /* NWADrawing.swift */,
 				E674BF3B1D24067E00F0F230 /* Drawing.swift */,
-				E674BF3D1D24075500F0F230 /* NWADrawing.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -238,12 +241,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2394B9A51D2418820020F9D9 /* NWADrawingView.swift in Sources */,
 				E674BF401D2408B700F0F230 /* CompletedDrawingViewController.swift in Sources */,
 				E674BF441D240EB500F0F230 /* DrawingViewController.swift in Sources */,
 				E674BF3C1D24067E00F0F230 /* Drawing.swift in Sources */,
 				E674BF421D2408DD00F0F230 /* BuildDrawingViewController.swift in Sources */,
 				E65700451D23F23C0076F2C3 /* MessagesViewController.swift in Sources */,
-				E674BF3E1D24075500F0F230 /* NWADrawing.swift in Sources */,
+				2394B9A31D24186A0020F9D9 /* NWADrawing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
