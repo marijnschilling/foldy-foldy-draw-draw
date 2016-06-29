@@ -1,5 +1,9 @@
 import UIKit
 
+protocol BuildDrawingViewControllerDelegate: class {
+
+}
+
 class BuildDrawingViewController: UIViewController {
     
     static let storyboardIdentifier = "BuildDrawingViewController"
@@ -8,7 +12,20 @@ class BuildDrawingViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.titleLabel.text = "Draw a head!"
+        self.instructionLabel.text = "Extend the neck under the line"
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+    }
+
     @IBAction func foldButtonPressed(_ sender: AnyObject) {
+
     }
 }
