@@ -1,16 +1,36 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController {
+class MessagesViewController: MSMessagesAppViewController, PasteBinServiceDelegate {
+    var service: PasteBinService?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        service = PasteBinService()
+        service?.delegate = self
+        service?.get()
+        service?.post()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - PasteBinServiceDelegate
+    
+    func getStarted() {
+        print("Started GET!")
+    }
+    func getFinished(result: Result<String>) {
+        print("GET finished!")
+    }
+    func postStarted() {
+        print("Started POST!")
+    }
+    func postFinished(result: Result<String>) {
+        print("POST finished!")
     }
     
     // MARK: - Conversation Handling
