@@ -57,7 +57,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCp-PQ-jsz" customClass="NWADrawingView" customModule="MessagesExtension" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.97118101728723405" green="0.97118101728723405" blue="0.97118101728723405" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="DCp-PQ-jsz" secondAttribute="height" multiplier="1:1" id="QHq-Oa-diL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="DCp-PQ-jsz" secondAttribute="height" multiplier="10:11" id="QHq-Oa-diL"/>
                                 </constraints>
                             </view>
                             <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjm-rt-VSM">
