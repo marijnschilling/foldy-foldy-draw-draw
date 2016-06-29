@@ -48,23 +48,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8u-XN-q3U">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prompt label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8u-XN-q3U">
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCp-PQ-jsz">
+                                <subviews>
+                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cjm-rt-VSM">
+                                        <frame key="frameInset" minY="347" width="375" height="2"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="1ep-9d-Rmw"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns3-FV-P04">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97118101728723405" green="0.97118101728723405" blue="0.97118101728723405" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ns3-FV-P04" firstAttribute="centerX" secondItem="DCp-PQ-jsz" secondAttribute="centerX" id="FWD-Hl-hwt"/>
+                                    <constraint firstItem="Cjm-rt-VSM" firstAttribute="leading" secondItem="DCp-PQ-jsz" secondAttribute="leading" id="Kel-X1-qXf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cjm-rt-VSM" secondAttribute="bottom" constant="71" id="ODp-Bu-IEM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cjm-rt-VSM" secondAttribute="trailing" id="cTc-1S-nhM"/>
+                                    <constraint firstItem="Ns3-FV-P04" firstAttribute="top" secondItem="Cjm-rt-VSM" secondAttribute="top" constant="10" id="oLQ-2f-hsc"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ue-v4-qqL">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Fold"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="B8u-XN-q3U" firstAttribute="top" secondItem="Yrg-ei-9da" secondAttribute="bottom" constant="10" id="7xy-CG-a0n"/>
+                            <constraint firstItem="DCp-PQ-jsz" firstAttribute="leading" secondItem="dHV-GL-rNA" secondAttribute="leading" id="8GY-J6-tZc"/>
+                            <constraint firstItem="DCp-PQ-jsz" firstAttribute="top" secondItem="B8u-XN-q3U" secondAttribute="bottom" constant="10" id="9Jx-9V-5K5"/>
                             <constraint firstItem="B8u-XN-q3U" firstAttribute="leading" secondItem="dHV-GL-rNA" secondAttribute="leadingMargin" id="T8F-bj-KOj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Ue-v4-qqL" secondAttribute="trailing" id="U0T-YP-uSa"/>
+                            <constraint firstAttribute="trailing" secondItem="DCp-PQ-jsz" secondAttribute="trailing" id="Zjx-jy-2LH"/>
+                            <constraint firstItem="2Ue-v4-qqL" firstAttribute="leading" secondItem="dHV-GL-rNA" secondAttribute="leadingMargin" id="dZ1-wU-KLX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="B8u-XN-q3U" secondAttribute="trailing" id="hGP-aW-pSp"/>
+                            <constraint firstItem="O0q-A1-3u9" firstAttribute="top" secondItem="DCp-PQ-jsz" secondAttribute="bottom" constant="185" id="wYM-VL-jmb"/>
+                            <constraint firstItem="O0q-A1-3u9" firstAttribute="top" secondItem="2Ue-v4-qqL" secondAttribute="bottom" constant="24" id="zlV-fU-KdE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="divider" destination="Cjm-rt-VSM" id="Bg2-Fo-pdQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzl-yw-u76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="137"/>
+            <point key="canvasLocation" x="824.79999999999995" y="136.28185907046478"/>
         </scene>
         <!--Drawing View Controller-->
         <scene sceneID="ap9-Wi-PQX">
