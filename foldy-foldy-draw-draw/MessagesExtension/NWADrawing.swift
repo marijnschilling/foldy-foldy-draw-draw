@@ -63,7 +63,7 @@ extension NWADrawing {
         }
     }
     
-    func toJSON() -> NSDictionary?
+    func toJSON() -> NSDictionary
     {
         var array = [String]()
         for path in strokes {

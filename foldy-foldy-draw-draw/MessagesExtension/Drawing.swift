@@ -76,7 +76,7 @@ extension Drawing {
         }
     }
     
-    func toJSON() -> NSDictionary
+    func toJSONData() -> Data?
     {
         let dict = NSDictionary()
         if self.head != nil
@@ -98,8 +98,13 @@ extension Drawing {
         {
             dict.setValue(self.feet?.toJSON(), forKey: "feet")
         }
-        
-        return dict
+        var data: Data? = nil
+        do {
+            data = try JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions.prettyPrinted)
+        } catch {
+            // oops
+        }
+        return data
     }
 }
 
