@@ -63,6 +63,7 @@ class MessagesViewController: MSMessagesAppViewController {
     private func instantiateDrawingsController() -> UIViewController {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: DrawingViewController.storyboardIdentifier) as? DrawingViewController else { fatalError("Unable to instantiate a DrawingViewController from the storyboard") }
 
+        controller.delegate = self
         return controller
     }
 
@@ -80,5 +81,11 @@ class MessagesViewController: MSMessagesAppViewController {
         controller.drawing = drawing
 
         return controller
+    }
+}
+
+extension MessagesViewController: DrawingViewControllerDelegate {
+    func drawingViewControllerDidSelectAdd(_ controller: IceCreamsViewController) {
+        requestPresentationStyle(.expanded)
     }
 }
