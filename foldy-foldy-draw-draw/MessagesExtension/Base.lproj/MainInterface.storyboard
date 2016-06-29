@@ -87,17 +87,17 @@
                             <constraint firstItem="DCp-PQ-jsz" firstAttribute="leading" secondItem="dHV-GL-rNA" secondAttribute="leading" id="3wN-X6-wtg"/>
                             <constraint firstAttribute="trailing" secondItem="DCp-PQ-jsz" secondAttribute="trailing" id="4mD-HM-hbg"/>
                             <constraint firstItem="Cjm-rt-VSM" firstAttribute="leading" secondItem="dHV-GL-rNA" secondAttribute="leading" id="5o7-VX-Vuy"/>
-                            <constraint firstItem="Ns3-FV-P04" firstAttribute="centerX" secondItem="dHV-GL-rNA" secondAttribute="centerX" id="8LP-17-qSV"/>
-                            <constraint firstItem="Ns3-FV-P04" firstAttribute="top" secondItem="Cjm-rt-VSM" secondAttribute="bottom" constant="10" id="F8R-e1-jbR"/>
                             <constraint firstItem="DCp-PQ-jsz" firstAttribute="top" secondItem="B8u-XN-q3U" secondAttribute="bottom" constant="10" id="KVq-JE-Cxt"/>
                             <constraint firstItem="B8u-XN-q3U" firstAttribute="top" secondItem="Yrg-ei-9da" secondAttribute="bottom" constant="10" id="Pzn-Nq-6Fv"/>
+                            <constraint firstItem="Cjm-rt-VSM" firstAttribute="bottom" secondItem="DCp-PQ-jsz" secondAttribute="bottom" constant="-60" id="Ryz-A4-KWc"/>
                             <constraint firstItem="2Ue-v4-qqL" firstAttribute="leading" secondItem="dHV-GL-rNA" secondAttribute="leadingMargin" constant="24" id="T4b-Y7-gAJ"/>
                             <constraint firstItem="O0q-A1-3u9" firstAttribute="top" secondItem="DCp-PQ-jsz" secondAttribute="bottom" constant="92" id="TRT-fB-xHp"/>
                             <constraint firstItem="B8u-XN-q3U" firstAttribute="leading" secondItem="dHV-GL-rNA" secondAttribute="leadingMargin" id="VT8-Co-ypZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Ue-v4-qqL" secondAttribute="trailing" constant="24" id="X1H-YM-KXI"/>
-                            <constraint firstItem="O0q-A1-3u9" firstAttribute="top" secondItem="Cjm-rt-VSM" secondAttribute="bottom" constant="240" id="fvE-ac-P0F"/>
                             <constraint firstItem="B8u-XN-q3U" firstAttribute="trailing" secondItem="dHV-GL-rNA" secondAttribute="trailingMargin" id="i5K-vj-VBS"/>
                             <constraint firstAttribute="trailing" secondItem="Cjm-rt-VSM" secondAttribute="trailing" id="pPm-UP-f9D"/>
+                            <constraint firstItem="Ns3-FV-P04" firstAttribute="top" secondItem="Cjm-rt-VSM" secondAttribute="top" constant="10" id="qsK-3z-sr8"/>
+                            <constraint firstItem="Ns3-FV-P04" firstAttribute="centerX" secondItem="dHV-GL-rNA" secondAttribute="centerX" id="v3Y-5O-yYv"/>
                         </constraints>
                     </view>
                     <connections>
