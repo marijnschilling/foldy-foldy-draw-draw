@@ -1,7 +1,7 @@
 import UIKit
 
-protocol DrawingViewControllerDelegate {
-    func drawingViewControllerDidSelectAdd(_ controller: IceCreamsViewController)
+protocol DrawingViewControllerDelegate: class {
+    func drawingViewControllerDidSelectAdd(_ controller: DrawingViewController)
 }
 
 class DrawingViewController: UIViewController {
@@ -12,6 +12,6 @@ class DrawingViewController: UIViewController {
     
     @IBAction func newDrawingButtonPressed(_ sender: UIButton) {
         
-        
+       self.delegate?.drawingViewControllerDidSelectAdd(self)
     }
 }

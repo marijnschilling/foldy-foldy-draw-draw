@@ -22,11 +22,13 @@ struct Drawing {
     var isComplete: Bool {
         return head != nil && torso != nil && legs != nil && feet != nil
     }
-}
+    
+    init(){
+        
+    }
 
-extension Drawing {
     init?(message: MSMessage?) {
-
+        
     }
 }
     
