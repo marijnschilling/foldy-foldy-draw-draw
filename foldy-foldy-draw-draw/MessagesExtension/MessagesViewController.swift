@@ -1,7 +1,7 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController, PasteBinServiceDelegate {
+class MessagesViewController: MSMessagesAppViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
