@@ -39,7 +39,7 @@
         <!--Build Drawing View Controller-->
         <scene sceneID="wtc-zH-vty">
             <objects>
-                <viewController id="qRl-gn-h8k" customClass="BuildDrawingViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BuildDrawingViewController" id="qRl-gn-h8k" customClass="BuildDrawingViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yrg-ei-9da"/>
                         <viewControllerLayoutGuide type="bottom" id="O0q-A1-3u9"/>
@@ -103,7 +103,7 @@
         <!--Completed Drawing View Controller-->
         <scene sceneID="wDD-Tz-nHu">
             <objects>
-                <viewController id="gfH-Kd-xwT" customClass="CompletedDrawingViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompletedDrawingViewController" id="gfH-Kd-xwT" customClass="CompletedDrawingViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RcA-7F-Kgx"/>
                         <viewControllerLayoutGuide type="bottom" id="74U-Dc-TGt"/>
