@@ -55,8 +55,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCp-PQ-jsz">
                                 <subviews>
-                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cjm-rt-VSM">
-                                        <frame key="frameInset" minY="347" width="375" height="2"/>
+                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjm-rt-VSM">
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="1ep-9d-Rmw"/>
@@ -119,6 +118,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsp-zg-JaT">
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="New drawing"/>
+                                <connections>
+                                    <action selector="newDrawingButtonPressed:" destination="xzS-Jg-TXJ" eventType="touchUpInside" id="7Ya-q1-Ir7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
