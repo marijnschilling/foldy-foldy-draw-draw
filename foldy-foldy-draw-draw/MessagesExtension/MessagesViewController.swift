@@ -74,16 +74,17 @@ class MessagesViewController: MSMessagesAppViewController {
         return controller
     }
 
-    private func instantiateCompletedDrawingController(with drawing: Drawing) -> UIViewController {
-        guard let controller = storyboard?.instantiateViewController(withIdentifier: CompletedDrawingViewController.storyboardIdentifier) as? CompletedDrawingViewController else { fatalError("Unable to instantiate a CompletedDrawingController from the storyboard") }
+    private func instantiateBuildDrawingViewController(with drawing: Drawing) -> UIViewController {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: BuildDrawingViewController.storyboardIdentifier) as? BuildDrawingViewController else { fatalError("Unable to instantiate a BuildDrawingViewController from the storyboard") }
 
         controller.drawing = drawing
+        controller.delegate = self
 
         return controller
     }
 
-    private func instantiateBuildDrawingViewController(with drawing: Drawing) -> UIViewController {
-        guard let controller = storyboard?.instantiateViewController(withIdentifier: BuildDrawingViewController.storyboardIdentifier) as? BuildDrawingViewController else { fatalError("Unable to instantiate a BuildDrawingViewController from the storyboard") }
+    private func instantiateCompletedDrawingController(with drawing: Drawing) -> UIViewController {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: CompletedDrawingViewController.storyboardIdentifier) as? CompletedDrawingViewController else { fatalError("Unable to instantiate a CompletedDrawingController from the storyboard") }
 
         controller.drawing = drawing
 
@@ -94,5 +95,11 @@ class MessagesViewController: MSMessagesAppViewController {
 extension MessagesViewController: DrawingViewControllerDelegate {
     func drawingViewControllerDidSelectAdd(_ controller: DrawingViewController) {
         requestPresentationStyle(.expanded)
+    }
+}
+
+extension MessagesViewController: BuildDrawingViewControllerDelegate {
+    func buildDrawingViewController(_: BuildDrawingViewController, didFinishDrawing: NWADrawing, forState: DrawingState){
+
     }
 }

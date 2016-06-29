@@ -1,7 +1,15 @@
 import UIKit
 
 protocol BuildDrawingViewControllerDelegate: class {
+    func buildDrawingViewController(_: BuildDrawingViewController, didFinishDrawing: NWADrawing, forState: DrawingState)
+}
 
+enum DrawingState {
+    case none
+    case head
+    case torso
+    case legs
+    case feet
 }
 
 class BuildDrawingViewController: UIViewController {
@@ -9,6 +17,10 @@ class BuildDrawingViewController: UIViewController {
     static let storyboardIdentifier = "BuildDrawingViewController"
 
     var drawing: Drawing?
+    
+    let state = DrawingState.none
+
+    weak var delegate: BuildDrawingViewControllerDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
@@ -27,6 +39,6 @@ class BuildDrawingViewController: UIViewController {
     }
 
     @IBAction func foldButtonPressed(_ sender: AnyObject) {
-
+        self.delegate?.buildDrawingViewController(self, didFinishDrawing: self.drawingView.drawing, forState: self.state)
     }
 }
