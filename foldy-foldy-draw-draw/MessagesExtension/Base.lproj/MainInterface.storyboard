@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,18 +53,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCp-PQ-jsz" customClass="NWADrawingView" customModule="MessagesExtension" customModuleProvider="target">
-                                <color key="backgroundColor" red="0.97118101728723405" green="0.97118101728723405" blue="0.97118101728723405" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="DCp-PQ-jsz" secondAttribute="height" multiplier="10:11" id="QHq-Oa-diL"/>
-                                </constraints>
-                            </view>
-                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjm-rt-VSM">
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="O43-mD-eND"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ue-v4-qqL">
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -79,6 +66,15 @@
                                     <action selector="foldButtonPressed:" destination="qRl-gn-h8k" eventType="touchUpInside" id="3bt-4d-KkU"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCp-PQ-jsz" customClass="NWADrawingView" customModule="MessagesExtension" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.97118101728723405" green="0.97118101728723405" blue="0.97118101728723405" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjm-rt-VSM">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="O43-mD-eND"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns3-FV-P04">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -95,17 +91,18 @@
                             <constraint firstItem="Ns3-FV-P04" firstAttribute="top" secondItem="Cjm-rt-VSM" secondAttribute="bottom" constant="10" id="F8R-e1-jbR"/>
                             <constraint firstItem="DCp-PQ-jsz" firstAttribute="top" secondItem="B8u-XN-q3U" secondAttribute="bottom" constant="10" id="KVq-JE-Cxt"/>
                             <constraint firstItem="B8u-XN-q3U" firstAttribute="top" secondItem="Yrg-ei-9da" secondAttribute="bottom" constant="10" id="Pzn-Nq-6Fv"/>
-                            <constraint firstItem="O0q-A1-3u9" firstAttribute="top" secondItem="DCp-PQ-jsz" secondAttribute="bottom" constant="180" id="TRT-fB-xHp"/>
+                            <constraint firstItem="2Ue-v4-qqL" firstAttribute="leading" secondItem="dHV-GL-rNA" secondAttribute="leadingMargin" constant="24" id="T4b-Y7-gAJ"/>
+                            <constraint firstItem="O0q-A1-3u9" firstAttribute="top" secondItem="DCp-PQ-jsz" secondAttribute="bottom" constant="92" id="TRT-fB-xHp"/>
                             <constraint firstItem="B8u-XN-q3U" firstAttribute="leading" secondItem="dHV-GL-rNA" secondAttribute="leadingMargin" id="VT8-Co-ypZ"/>
-                            <constraint firstItem="2Ue-v4-qqL" firstAttribute="leading" secondItem="dHV-GL-rNA" secondAttribute="leadingMargin" id="Wgq-Ca-aWm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Ue-v4-qqL" secondAttribute="trailing" constant="24" id="X1H-YM-KXI"/>
                             <constraint firstItem="O0q-A1-3u9" firstAttribute="top" secondItem="Cjm-rt-VSM" secondAttribute="bottom" constant="240" id="fvE-ac-P0F"/>
                             <constraint firstItem="B8u-XN-q3U" firstAttribute="trailing" secondItem="dHV-GL-rNA" secondAttribute="trailingMargin" id="i5K-vj-VBS"/>
                             <constraint firstAttribute="trailing" secondItem="Cjm-rt-VSM" secondAttribute="trailing" id="pPm-UP-f9D"/>
-                            <constraint firstItem="2Ue-v4-qqL" firstAttribute="trailing" secondItem="dHV-GL-rNA" secondAttribute="trailingMargin" id="qBw-pC-CBH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="drawingView" destination="DCp-PQ-jsz" id="Y5D-lU-J8h"/>
+                        <outlet property="foldButton" destination="2Ue-v4-qqL" id="dKT-qR-Sng"/>
                         <outlet property="instructionLabel" destination="Ns3-FV-P04" id="e6j-yM-42V"/>
                         <outlet property="titleLabel" destination="B8u-XN-q3U" id="JnW-5G-sSD"/>
                     </connections>
