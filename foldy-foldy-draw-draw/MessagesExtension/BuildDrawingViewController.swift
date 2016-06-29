@@ -9,6 +9,7 @@ class BuildDrawingViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
     
+    @IBOutlet weak var drawingView: NWADrawingView!
     @IBAction func foldButtonPressed(_ sender: AnyObject) {
     }
 }
