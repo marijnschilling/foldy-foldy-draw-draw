@@ -18,7 +18,14 @@ class MessagesViewController: MSMessagesAppViewController {
     override func willBecomeActive(with conversation: MSConversation) {
         self.presentViewController(for: conversation, with: presentationStyle)
     }
-    
+
+    override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
+        guard let conversation = activeConversation else { fatalError("Expected an active converstation") }
+
+        // Present the view controller appropriate for the conversation and presentation style.
+        presentViewController(for: conversation, with: presentationStyle)
+    }
+
     private func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
         // Determine the controller to present.
         let controller: UIViewController
@@ -28,7 +35,7 @@ class MessagesViewController: MSMessagesAppViewController {
         }
         else {
             
-            let drawing = Drawing(message: conversation.selectedMessage) ?? Drawing()
+            let drawing = Drawing()
             
             if drawing.isComplete {
                 controller = instantiateCompletedDrawingController(with: drawing)
@@ -85,7 +92,7 @@ class MessagesViewController: MSMessagesAppViewController {
 }
 
 extension MessagesViewController: DrawingViewControllerDelegate {
-    func drawingViewControllerDidSelectAdd(_ controller: IceCreamsViewController) {
+    func drawingViewControllerDidSelectAdd(_ controller: DrawingViewController) {
         requestPresentationStyle(.expanded)
     }
 }
