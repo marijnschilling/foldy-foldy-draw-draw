@@ -71,6 +71,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Fold"/>
+                                <connections>
+                                    <action selector="foldButtonPressed:" destination="qRl-gn-h8k" eventType="touchUpInside" id="3bt-4d-KkU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns3-FV-P04">
                                 <frame key="frameInset" minX="149" minY="437" width="77" height="17"/>
@@ -86,6 +89,10 @@
                             <constraint firstItem="Ns3-FV-P04" firstAttribute="top" secondItem="Cjm-rt-VSM" secondAttribute="bottom" constant="240" id="znZ-xx-NTE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="instructionLabel" destination="Ns3-FV-P04" id="e6j-yM-42V"/>
+                        <outlet property="titleLabel" destination="B8u-XN-q3U" id="JnW-5G-sSD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzl-yw-u76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
