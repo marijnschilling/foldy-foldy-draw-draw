@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E657003B1D23F23C0076F2C3"
-               BuildableName = "MessagesExtension.appex"
+               BuildableName = "MessagesExtension"
                BlueprintName = "MessagesExtension"
                ReferencedContainer = "container:foldy-foldy-draw-draw.xcodeproj">
             </BuildableReference>
@@ -71,7 +71,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E65700311D23F23C0076F2C3"
-            BuildableName = "foldy-foldy-draw-draw.app"
+            BuildableName = "foldy-foldy-draw-draw"
             BlueprintName = "foldy-foldy-draw-draw"
             ReferencedContainer = "container:foldy-foldy-draw-draw.xcodeproj">
          </BuildableReference>
