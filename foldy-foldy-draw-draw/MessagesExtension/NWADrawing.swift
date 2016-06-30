@@ -11,6 +11,10 @@ import UIKit
 /// A representation for a simple drawing.
 struct NWADrawing {
     
+    init() {
+        
+    }
+    
     /// Returns the number of strokes in the drawing.
     var numberOfStrokes: Int {
         get {
@@ -43,3 +47,30 @@ struct NWADrawing {
     }
 }
 
+// MARK: - JSON stuff
+
+extension NWADrawing {
+    
+    init(dict: NSDictionary) {
+        if let array: [String] = dict.value(forKey: "strokes") as? [String]
+        {
+            for string in array {
+                if let data  = Data(base64Encoded: string), let bezierPath: UIBezierPath = NSKeyedUnarchiver.unarchiveObject(with: data) as? UIBezierPath
+                {
+                    addStroke(stroke: bezierPath)
+                }
+            }
+        }
+    }
+    
+    func toJSON() -> NSDictionary
+    {
+        var array = [String]()
+        for path in strokes {
+            let data = NSKeyedArchiver.archivedData(withRootObject: path)
+            let string = data.base64EncodedString()
+            array.append(string)
+        }
+        return ["strokes" : array]
+    }
+}
